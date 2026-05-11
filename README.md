@@ -1,6 +1,3 @@
-# lotto
-로또 서비스 개발 소스코드 보고서
-
 # 로또 서비스 개발 보고서 (260511)
 
 **학과 :** 모바일시스템공학부
@@ -161,9 +158,24 @@ Gemini (Google)
 
 ---
 
-## 6. 결론 및 느낀점
+## 6. 소스 코드 및 관리
 
-### 5.1 기술적 성장 및 성과
+- **GitHub 저장소 URL**
+
+ [https://github.com/compose-coffee/lotto](https://www.google.com/search?q=https://github.com/compose-coffee/lotto&authuser=1)
+
+- **주요 관리 항목**
+
+- **Backend** : Django MVT 패턴 기반 로또 번호 생성 및 당첨 확인 로직
+- **Infrastructure** : `Dockerfile`, `docker-compose.yml`을 통한 가상화 환경 구축
+- **Database** : PostgreSQL 연동을 위한 스키마 정의 및 Migration 이력
+- **Frontend** : CSS Animation을 활용한 당첨 결과 연출 페이지
+
+---
+
+## 7. 결론 및 느낀점
+
+### 7.1 기술적 성장 및 성과
 
 - **컨테이너 환경의 이해**
 
@@ -173,7 +185,7 @@ Gemini (Google)
 
 Django의 Model, View, Template 간의 데이터 흐름을 직접 구현하며, 프레임워크가 제공하는 추상화된 기능들을 활용해 복잡한 비즈니스 로직을 효율적으로 처리하는 경험을 함.
 
-### 5.2 문제 해결 역량 강화
+### 7.2 문제 해결 역량 강화
 
 - **데이터베이스 마이그레이션**
 
@@ -183,7 +195,7 @@ Django의 Model, View, Template 간의 데이터 흐름을 직접 구현하며, 
 
 `TemplateDoesNotExist`나 `ProgrammingError`와 같은 실무적인 에러들을 직면하고, 로그 분석과 AI 도구의 자문을 통해 원인을 파악하여 해결하는 과정을 통해 문제 해결 역량을 한 단계 높임.
 
-### 5.3 향후 과제 및 고찰
+### 7.3 향후 과제 및 고찰
 
 - **확장성 고려**
 
