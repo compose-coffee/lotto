@@ -1,0 +1,25 @@
+{% if rank == 1 %}
+    <div style="background-color: gold; padding: 50px; text-align: center; border: 10px solid orange; animation: blink 1s infinite;">
+        <h1 style="font-size: 50px; color: red;">🎊 당신의 IP 주소를 분석하고 있습니다.. 🎊</h1>
+        <h2 style="font-size: 40px;">💰 당첨금: {{ prize|floatformat:"0" }}원 💰</h2>
+        <p style="font-size: 20px;">지금 저희가 20억 수령을 위해 당신에게 가고 있습니다. </p>
+    </div>
+
+    <style>
+        @keyframes blink {
+            0% { background-color: gold; }
+            50% { background-color: yellow; }
+            100% { background-color: gold; }
+        }
+    </style>
+{% else %}
+    <h1>당첨 확인 결과</h1>
+    <hr>
+    <p>결과: <strong>{{ match_count }}개</strong> 일치</p>
+    <h3>예상 당첨금: {{ prize }}원</h3>
+{% endif %}
+
+<hr>
+<p>당첨 번호: [ {{ round.win_numbers }} ]</p>
+<p>나의 번호: [ {{ ticket.numbers }} ]</p>
+<a href="{% url 'index' %}">다시 구매하기</a>

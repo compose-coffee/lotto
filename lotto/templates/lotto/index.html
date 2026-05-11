@@ -1,0 +1,16 @@
+<h1>6/45 로또 사이트</h1>
+<a href="{% url 'buy_lotto' %}">로또 자동 구매하기</a>
+<hr>
+<h3>최근 구매 내역</h3>
+<ul>
+    {% for ticket in tickets %}
+    <li>
+        구매번호: {{ ticket.numbers }}
+        <form action="{% url 'check_win' %}" method="GET" style="display:inline;">
+            <input type="number" name="round_num" placeholder="정답 회차(예:1)" required>
+            <input type="hidden" name="ticket_id" value="{{ ticket.id }}">
+            <button type="submit">당첨확인</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>

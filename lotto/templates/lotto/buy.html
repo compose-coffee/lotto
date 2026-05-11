@@ -1,0 +1,7 @@
+<h1>로또 구매</h1>
+<form method="POST">
+    {% csrf_token %}
+    <p>자동으로 번호를 생성하시겠습니까?</p>
+    <button type="submit">구매 확정</button>
+</form>
+<a href="{% url 'index' %}">취소</a>
